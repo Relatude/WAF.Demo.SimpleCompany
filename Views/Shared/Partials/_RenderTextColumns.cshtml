@@ -1,0 +1,25 @@
+﻿@model Paragraph_Text_Two_Column
+
+@{
+    var paragraph = Model;
+}
+
+    <!-- Services Half Width Text -->
+    <div class="half-width-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 half-width-text wow fadeInLeft">
+                    <h3>@paragraph.Left_Column_Headline</h3>
+                    <p>
+                        @Html.Raw(paragraph.Left_Column_Text)
+                    </p>
+                </div>
+                <div class="col-sm-6 half-width-text wow fadeInUp">
+                    <h3>@paragraph.Right_Column_Headline</h3>
+                    <p>
+                        @Html.Raw(paragraph.Right_Column_Text)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>

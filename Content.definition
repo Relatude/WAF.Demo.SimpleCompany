@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definition Name="Website" Build="12" Guid="6999d445-e4f6-4f36-b81c-a9c9df0a1558">
+  <Cultures>
+    <Culture LCID="1033" Name="English" />
+    <Culture LCID="1044" Name="Norwegian" />
+  </Cultures>
+  <ContentClasses>
+    <ContentClass Guid="98e254d7-3a7d-464f-b824-9e0f165cc7f1" ClassName="ControlPanel" Namespace="SimpleCompanyWebsite" TableName="control_panel">
+      <Properties>
+        <Property Guid="22e11c88-afd4-437c-a9c0-33713fbf8fed" CodeName="MainMenu" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="19089f1a-921a-4a8f-86f2-d8946a41fc3b" Key="Value" Name="main_menu" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="8157318e-4f6e-4024-8360-971d1274b73c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="e4711120-f81a-44c7-9e23-cb5ae6a58879" CodeName="Logo" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="5a68b4ae-5353-4838-b433-0428562c89b1" Key="Filename" Name="logo_filename" />
+            <ShortString Guid="58059509-8af1-4fea-9515-ea191c903515" Key="Type" Name="logo_type_name" />
+            <ShortString Guid="06490a0a-f4f4-4191-831e-990ba4b01924" Key="Extension" Name="logo_extension" />
+            <Float Guid="50743e87-0e7b-4630-a163-e5b5c9c3453c" Key="Bytes" Name="logo_bytes" />
+            <LongString Guid="8b3fe78e-8ca3-4f32-81b3-80c57f6517bd" Key="Info" Name="logo_info" />
+            <Integer Guid="4d5323d5-bbd9-4573-a338-ae96005702cd" Key="Reference" Name="logo_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="0ecaef16-d4a6-43de-b7c5-0eaecb9721c3" CodeName="Frontpage" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="d8c00707-fd16-45a5-8027-b5ea0a00fb20" Key="Value" Name="frontpage" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="46830257-9d67-485c-8bb1-4f09812c414b" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="9db543ce-65d3-4fef-aa2f-1964f80e4431" CodeName="Portfolio" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="afda55d8-163f-406d-b257-24cfee6fca15" Key="Value" Name="portfolio" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="4d7223ba-925e-4446-bdfb-0fdaca6331ec" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="f88a1017-af1f-46f7-a0ee-36f7c6f05329" CodeName="Settings" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="02ee5d9a-6aa7-4306-889c-ae0da30a4803" Key="Value" Name="settings" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="51aa7668-ec10-4b1e-8f37-2be94099b424" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="b06389e6-fe3c-4004-a635-ac6170c03e8e" CodeName="ContactPage" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="f58c2730-7860-464b-977e-1e974881d4f5" Key="Value" Name="contact_page" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="0d9916cf-1f69-4109-8e13-8dc94947062e" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <Settings>
+        <Int Key="MinimumInstances" Value="1" />
+        <Int Key="MaximumInstances" Value="1" />
+      </Settings>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMNSURBVChTVVNLSKJhFP1+eyzSDEvLVAphQmrTZG1q2wgtZhUELVxNtAqiVYskh3GoaREtI5CxRRME1SKwiJQkqOyBRVHKwJTRaJT2stSe+s+5XyXNBxf/73HPPefcqyCKIltZWfEwj8eTog0/oSX4fD4xEom8nOzv7/PjeDzOJPSxu7vLLi8vWV5eHmP0YnNzs41+Ocjy8nK6pKREuLu7Y6Ojo1YBz8WlpSWTSqVyVVVVMcHtdovr6+vi2dlZMhQK/eBV8Mr+8PDw+f7+nmm1WvXe3p4mmUyGWltbs4S1tTUfLvT5+fmK2dlZ7/Pzs9VkMrmIwcLCQogjTE9P96FGT25uLjs6OmIgwc7Pz1lLS4uQkdbR0SHHxZ+amhrVxMREFkQZZmZmApz7W3i9XnjiyWii4Ajb29sp8NCp1eoTEDx9fHxk0Ok0m83tErjQK5fLJUVFRSekwmAwqMvLy9V+v7+NSpMzf5VKpQ6amcvlMgHFVltbW7+xsXEFlKCkrKxMR8YmEgk2MDDghhIrZdbV1SkODw8/cg6rq6tcSjgc5hKpLU6ns394eNgiGR8ft5SWlrLFxcWERqNhU1NTYiwWo4c9lMQRurq6KqVS6e/GxsaUw+GICoLwYWxs7Cbz4G2hJ5WpVCqMiMPyU/BT0T3aEYX1apzJnp6etM3NzYHXlJcJ2dnZsRwcHIg6nc6PnsWg7gahJCrX19csOztbiebegGqsoaHBPz8/Lw4ODlooN8MAQvsKCgp6yEswYJR8fHzMcnJymF6vJxCG6gxAxLS/u7v7BQA+pyoqKiQXFxfs9vaWJwQCARYMBk0Wi8VNj+x2+6fCwkIXesABZDIZd3NoaCgtwAwfJqdYoVBIq6urFTTKNFWo4kVFK1VF2IxGYz19E7vJyckrtCKBfYRLgPW92HwDgECaCYCC5KTTac4KA8/3GBuGoiL2X0dGRr5nPLDZbHZMxBdMRAR0jTBzq6mpiZwnCadINgJsCxKKUcwxNzfXTnn/tfH96uzsbItGo2aqjL7/wp/m5+vVu8XYPzEGAofytmeHAAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="374198d5-2ae5-4f72-b189-d5924647734e" ClassName="SocialMediaLink" Namespace="SimpleCompanyWebsite" TableName="social_media_link">
+      <Properties>
+        <Property Guid="6138a3b1-64ea-4d51-b368-dd35bb1caeb1" CodeName="Link" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="82b78ea4-bd9b-458d-bba5-b4e2d304d20b" Key="Value" Name="link" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVChTdVJLSxtRFP7uOKhpKVbU8RH6GhdSCZhCQNvQRbpw4cKV7vsL+j8Kha67atfiiyqREgw1JqCIadBojImJBjWNKbZUHROTzO25V2caKf3gzNw5j+98c+7B1tYWJ4CJx8cdcMRisWtPrVbjEIhGo3xlZSUnHHaugGmafHp6WsfGxgZfX1+XURnc39/n388qfHl5WToZHYzInRcOxhS48n7ItPn5eSOZTMoMyZHL5bgoFZ3W1tZkwDKlXC5fOp1ONLU58SGh4KvqkQqCwaCUY8taXFw0fD6f420MaFVreNWcxebmpm5TWTY1NWVMTEw8sb5ZPB4XvXFjmsfjKUpKC0KYGId4C7HhcLijnlERSdVq9YqAFHOip6fnhAR2yGoCKxaLvKWlBe/jKlqbGPR7Jh6W9pBKpbSRkZEii0Qi3t7e3vCp2oZQQUUDAx7dNfHA2EUikdBkH/pF79HREd/+UeHvvnF+dlnmCwsLFKIRWGL8fr9XiBRi6SyDtxKEzczMDNUHhTGaFu/v77/R/Bf5fB6FQgGVSkUbHBy8PZs6KGKAArRMUBSF0XJEDcNAZ2cn3G43urq6Tmil+NLSkj2aeogCLhIFhCTqiDOzEZ92Gco1hueaCZ8TyGazODw8BC2HNjw8bCtiq6urL2k7vui67mhvb8f2qYnZAxUdzUBjA90kzeFXGXjWdk2UTqfF1qJUKmmjo6NFe5tCoZCXzoG+vj6HpmlI/jTx+UDB/WYFKt3N7ytSWC3hjbsRmb00MpkMLi4uHtsEFgKBgJcUBVwul6O7uxs7RBQ6VvD6KZDLXBeen5/rY2NjWZH/D4GFubm5IYoFBwYGHCTX6mgXWvgvgYXJyUlBdDw+Pp67cdUB+ANhr+pPU9YePwAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="3b48fa07-f106-4473-9055-ce122d0d059c" ClassName="Project" Namespace="SimpleCompanyWebsite" TableName="project">
+      <Properties>
+        <Property Guid="be5e19b8-43d3-4fd4-8751-b30e7dbf0cb9" CodeName="Blurb" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="85101e48-488a-4e8f-8853-f1f3cac948ee" Key="Value" Name="blurb" />
+          </DataValues>
+        </Property>
+        <Property Guid="a4ec9abe-f633-414c-98db-e7e77308e708" CodeName="MainImage" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="9e12612c-c2f0-4178-a519-545f2cf1bc10" Key="Filename" Name="main_image_filename" />
+            <ShortString Guid="c7332df1-6a4e-41e9-acf9-770ab84c91ea" Key="Type" Name="main_image_type_name" />
+            <ShortString Guid="af54a6df-13e6-4506-a995-a25ea66877a8" Key="Extension" Name="main_image_extension" />
+            <Float Guid="7d1a5597-2267-4396-80bd-afa7d2c538a8" Key="Bytes" Name="main_image_bytes" />
+            <LongString Guid="36e8436e-4926-49bb-8889-188bd607a9ce" Key="Info" Name="main_image_info" />
+            <Integer Guid="7b27e9ef-e866-4232-aa1c-9966daadebbb" Key="Reference" Name="main_image_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="c10e7e95-ad9c-42e4-838e-ea6f0d95650d" CodeName="ImageSeries" PropertyClassGuid="db1239e2-c255-499f-9038-1ca8e460901e" />
+        <Property Guid="a053e8e9-12cb-4988-8e08-3f6b041d038d" CodeName="Date_Started" PropertyClassGuid="af7f07f2-d2c0-41a4-902c-ee3e2f110ef7">
+          <DataValues>
+            <DateTime Guid="fa38f980-2a89-4c21-8326-f3e5eb972ab3" Key="Value" Name="date__started" />
+          </DataValues>
+        </Property>
+        <Property Guid="28f1be51-afd0-4f01-94ce-951b71318e08" CodeName="Date_Ended" PropertyClassGuid="af7f07f2-d2c0-41a4-902c-ee3e2f110ef7">
+          <DataValues>
+            <DateTime Guid="d31ddba2-53ac-4e8d-b611-f59ec8544ce3" Key="Value" Name="date__ended" />
+          </DataValues>
+          <Settings>
+            <Boolean Key="AllowNull" Value="True" />
+          </Settings>
+        </Property>
+        <Property Guid="e31c5d1b-101b-4fa1-951f-1dc71717a58f" CodeName="Related_Power_Types" PropertyClassGuid="7a2867fe-f2db-4c9f-8956-8c05ad47d8c3">
+          <DataValues>
+            <EnumFlags Guid="5d4c85c9-d650-45b6-8eaf-a40afd8936c8" Key="Value" Name="related__power__types">
+              <EnumFlagEntries>
+                <EnumFlagEntry Suffix="Slot_0" Guid="11bf4f71-23eb-49df-b3e6-aa8d90cd759a" />
+              </EnumFlagEntries>
+            </EnumFlags>
+          </DataValues>
+          <Settings>
+            <EnumerationReference Key="Enumeration" Value="0e832b86-cbcd-4f9b-9d07-ab5855169fa3" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVChTpVJLS1tBFP5u8A+46KKguJCiRQNRdOFKKq1242OTqmBQcVVQ8T9006JgN+oi7UJQ1IWPtDVGEKOCCGKwhXZREEoD0lJUcu195b5OZ6aJN1eRLPLBd8+cM9+Ze86ZkYgIHAHxZbgbAY9w9kylmCEEXu5EhKa+aRE1r6rpJicPkTu+mPaiiURC5OYZUKou0b3SLhQvVnu8Hc7J7QwdpK7Y0ov5BJyxWIwZz5cm9kfItC3MtM1LQ/EwyepfrIcTUsPbIGmK7rV2H4oKvJkwHH+Tafj9d1+GTzB7+Avp9EXOy6Gw4ng8zoznc/qcQkYiEWZYm2PJIbJYm3NPF6T+D12Uub7G1sCeVPemluyshcCTh8+hm1nxu9CDRlzJslgHHz2GY7slzGF2XyXNtKEYJmTNwHRvpZTb8sE3hkL8zqhoLnfQUg78PL81mgIULbEYbg5IJpPkui4cx4FlWTAMA5qmQdd1qKoKRVGEzcei0ahoqfQKRncH6VlFJ1xy8OnHGt51LIuT+2Kd1FrRBs1W8fHrJvZGjkS87nUNhWqDTO/i5MtnlBnsDjfOVuDw8l2HawT4fS79WUY2awrmYRoWjk9T7LX890tsAfgHJlZUjd7inN8AAAAASUVORK5CYII=</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="51aa7668-ec10-4b1e-8f37-2be94099b424" ClassName="Settings" Namespace="SimpleCompanyWebsite" TableName="settings">
+      <Properties>
+        <Property Guid="256e8c86-83ab-4ddb-92df-eec4e85149cd" CodeName="Blurb" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="b3b2e8c4-4778-4fdc-9d25-15fe442ebf85" Key="Value" Name="blurb" />
+          </DataValues>
+        </Property>
+        <Property Guid="d28071d7-f1b2-487b-ae95-290e83bdfc50" CodeName="Street_Address" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="ca0267bf-3deb-4553-a62e-39a3465824c2" Key="Value" Name="street__address" />
+          </DataValues>
+        </Property>
+        <Property Guid="4bc9b9ac-2049-4f07-a13e-bc148e86028c" CodeName="Phone" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="e5a078e8-0e44-4c45-a035-e047a2eb4cfd" Key="Value" Name="phone" />
+          </DataValues>
+        </Property>
+        <Property Guid="8d6c8a5a-84cd-410a-931c-15164664dc36" CodeName="Email" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="1530c913-089a-4b61-a8cd-d76ad3630607" Key="Value" Name="email" />
+          </DataValues>
+        </Property>
+        <Property Guid="fb2695ba-dfa7-4e54-a870-c623e6248b74" CodeName="Skype" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="8124d97a-b50e-44ae-a1ec-0b73701fded7" Key="Value" Name="skype" />
+          </DataValues>
+        </Property>
+        <Property Guid="95a6710e-ac70-494b-ae0d-2dd63e5a4a4d" CodeName="Facebook_Link" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="5fe0ed9f-cc74-4271-9bc1-b74bae4f67ac" Key="Value" Name="facebook__link" />
+          </DataValues>
+        </Property>
+        <Property Guid="e5d3ab74-8add-49bf-9f98-acdc053babcb" CodeName="Twitter_Link" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="61f78b2e-36c4-4d35-8c3b-06365f5203dc" Key="Value" Name="twitter__link" />
+          </DataValues>
+        </Property>
+        <Property Guid="cde54cdf-0575-4967-a3b1-d716b9f602c1" CodeName="Instagram_Link" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="8f0ca234-5351-4e12-ba1a-7e8c44906e27" Key="Value" Name="instagram__link" />
+          </DataValues>
+        </Property>
+        <Property Guid="c1825abd-78f7-47a8-91a2-d07be81311bc" CodeName="GoogleMapsFrameUrl" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="a120edec-543e-4669-ba77-c1499f045f56" Key="Value" Name="google_maps_frame_url" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Settings>
+        <Int Key="MinimumInstances" Value="1" />
+        <Int Key="MaximumInstances" Value="1" />
+      </Settings>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJaSURBVChTdVPLappREJ7fS0BTNYgXUizYjS8Qq/gO3fsELgVxVZ8hi1DQhSBERAS3QkBEBDfRP1Vw4ULdVOnCC4qGeEvU/3RmvGBaMvB5zn/ON99czghCCEDz0I/U6XROXyppu92KYrEIEl29vr4qCNDr9fsDvFXq9TqMx2M+uEGoEaT4BOS7Wq0ErXjmYTG6xRCQy+VARR9vb2/w+PgIrVYrx5lsNpvdYrEQhOl0yu6xWOwnctmBZY5Yr9eiUCiIyWSyj3EgKMTM5/PgdrvBbDZDMpkEh8MBEoXAmAu1Wq0nUjAYBJ/PBy6XS9ze3sqk4EB8psszG6FjlzZE8Mznc1mSJKoRMAdQFAWur6+/Eomz1Gq1oNFoeFWpVGC1Won8G50kJmB8BhGooZTs0TgEsmX6KJVKTEJ5DpfJZD6xwtGurq6gUqmA0+kEo9EIBoNh/o5AiXq9XkilUtDtdqHdbluIQE3iRo1GI5Z/fn6GRCIB9/f3k+NU3GB5M3oTjH1q+znoCaLRKL2PE6Eiv4PvqRCeAxwdXgkvLy9iNpsJjMwiy+VSYE9FPB5nIRLgt0R8Q4LMB1gHGe13ux0D72hi+AFob7PZqO9epP36rwlHo32/3wdZloEGutlsMmgWHx4e4O7u7gfx3gn8a1gGWCwWKJfLjFqtxiLUSCxPS5wPBbLZLPR6PTCZTNz1SCQCoVCIs7q8vAS73f49EAgo5wL7lh7M7/fDcDiEwWAAOp0OGo0GVKtVuLi4APzXcCZ4ruF5x3q/oI8d8WFG4XBYpjlIp9PUvB0CR178+QuqzpZdxi709gAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="46830257-9d67-485c-8bb1-4f09812c414b" ClassName="Frontpage" Namespace="SimpleCompanyWebsite" TableName="frontpage">
+      <Properties>
+        <Property Guid="1e6e68da-e702-441f-8d3b-2b5a94180755" CodeName="TitleText" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="eaace988-e9ee-4d86-ba73-0c42b43a13e5" Key="Value" Name="title_text" />
+          </DataValues>
+        </Property>
+        <Property Guid="2be896ef-4dbf-4edc-b6a3-bdb9d673d6b3" CodeName="CoverImages" PropertyClassGuid="db1239e2-c255-499f-9038-1ca8e460901e">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="084af1c0-0efc-409e-83c2-ecef1cadb8a7" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="3f80c15e-5fb4-460b-a5af-15cc08ce8525" CodeName="Paragraphs" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="92565199-f47a-4d2f-82e2-d3960748f002" />
+                <ClassReference ClassGuid="decf5c3d-3575-4e3c-92b8-9f3e0523b793" />
+                <ClassReference ClassGuid="9e9050f8-a3e7-4e99-a226-789abe083b67" />
+                <ClassReference ClassGuid="ea1cbbc0-ebf1-4201-a09f-ced1848597c1" />
+                <ClassReference ClassGuid="4ae79785-a951-44c3-bee2-2222f513753c" />
+                <ClassReference ClassGuid="618b2529-f69b-4e58-bc11-48f1917b339b" />
+                <ClassReference ClassGuid="12a94109-7b36-41b9-8a8e-510e5a94dd94" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <InheritedPropertyChanges>
+        <InheritedPropertyChange Guid="f9f69ddb-6776-4aee-947c-6a2565e432af" ChangeGuid="fdfffc5b-7ed0-4772-8292-ec355a262999">
+          <Settings>
+            <Boolean Key="HideInEdit" Value="True" />
+          </Settings>
+        </InheritedPropertyChange>
+        <InheritedPropertyChange Guid="d43e3a60-f54a-42ed-8624-2b5d064b07da" ChangeGuid="3896a89e-b0d2-46bc-94cd-dc77c47e8271">
+          <Settings>
+            <Boolean Key="HideInEdit" Value="True" />
+          </Settings>
+        </InheritedPropertyChange>
+      </InheritedPropertyChanges>
+      <Settings>
+        <Int Key="MinimumInstances" Value="1" />
+        <Int Key="MaximumInstances" Value="1" />
+      </Settings>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAExSURBVChTYzSfd30aAwNDJuOWLVv+nxUwZQCJ/AeKMDA0Hnn5HwQY4+bs/X+TSQosCAYgtcgAoQcCpjNBGWCg/u9ZJiNIWdPRV2AB4w+nGcACYB4QbN26FWKvk4UGVAgV7DtxA9NWZACSY4EqZoDZAwN11mJgGuRHXzALB0D3Bwo4kajByLj4xf//195BRZCAlhADQ4w4AyNhE0CuhfKxAYgCdB+AANQXjChhiw0QtgJfOHh7e28G+2JmogbDs19QUSKAFBsDQ/r8GxBfggwoddNguP0WKksEUBVmYOjeBTGApYT3CoOHgCyDFdMnqDRhwMfHx/AfqI+BQYOBhZOTk4GbmxuMsQUnOoAlEpA+MMCX3PABqD4GeHIEAVJcAAPgLAllkwyA0QhOSlAuOYCBAQBtieMtyenJEAAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>966d7227-69e0-4b7a-8475-b89ad21a972a</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( SimpleCompanyWebsite.Frontpage ( TitleText HeaderSubtitle FontAwesome_IconString Top_Level_Is_Link TopLevelIsLink_Description CoverImages ) SimpleCompanyWebsite.BaseItem ( ) Native.HierarchicalContent ( TemplatePath ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="92565199-f47a-4d2f-82e2-d3960748f002" ClassName="Paragraph_Text" Namespace="SimpleCompanyWebsite" TableName="paragraph__text">
+      <Globalization>
+        <Lang LCID="1033" Name="Text paragraph" />
+        <Lang LCID="1044" Name="Tekst paragraf" />
+        <Lang />
+      </Globalization>
+      <Properties>
+        <Property Guid="52f2fd9b-645b-4d98-92d8-c52339812142" CodeName="Headline" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="85f60545-ed8e-436e-8129-73ed1baefd17" Key="Value" Name="headline" />
+          </DataValues>
+        </Property>
+        <Property Guid="644975f8-e71f-41ec-bbe1-40cec4a12745" CodeName="Text" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="554f6672-6812-4071-a6f5-e8a203fb9b9b" Key="Value" Name="text" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVChTpVHLDYJAEB3swBZswTM3TEw4G4UCsAYb0Bq0AjvQBOnAPjgDJz7JOrMwm/0YMPKSx8zOznuzEzwhBBAW8otwK0CV/flxpUhULQynILWHyzOQJ8T3DgPsjpMSznWy5w7DEqPph3Bm2HBnWvjdQd9NBz8ywZBSboMd1sjbN5f5W8xvmHzDFByD4X+97qftpq8AxHEsmqaBtm2BIjHLMo/ujCeiOEUhXawo76sAZVlKFkWhyJAG2EyCN6ZHOiNoejDUlIFOhlohiiL5zDHyChTzPJcrKIMwDEcNSKSzqirTwPd9Ude1IbCFXdfpNA3+A8AHEbkHtAWWBrUAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="d85178ea-7906-4bb5-b267-46d69f4792ce" ClassName="Article" Namespace="SimpleCompanyWebsite" TableName="article">
+      <Properties>
+        <Property Guid="ded7b1c9-a5e9-450b-8291-a4aed2ef2d9b" CodeName="Paragraphs" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="61a4bc12-1d7f-42c4-9f22-cbe5873529cd" />
+                <ClassReference ClassGuid="92565199-f47a-4d2f-82e2-d3960748f002" />
+                <ClassReference ClassGuid="decf5c3d-3575-4e3c-92b8-9f3e0523b793" />
+                <ClassReference ClassGuid="9e9050f8-a3e7-4e99-a226-789abe083b67" />
+                <ClassReference ClassGuid="ea1cbbc0-ebf1-4201-a09f-ced1848597c1" />
+                <ClassReference ClassGuid="4ae79785-a951-44c3-bee2-2222f513753c" />
+                <ClassReference ClassGuid="618b2529-f69b-4e58-bc11-48f1917b339b" />
+                <ClassReference ClassGuid="12a94109-7b36-41b9-8a8e-510e5a94dd94" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAJHSURBVChTlVM9bFJRFP4efw+wgIOWZ2AgdiEupg4QEyX1ZzEyuBHj5uBoZDCWRBPXhuigdHTppmhqbOJSkwLtQlJbUoNEE9RGROwP2lcKtX2P672HB4ToUL/k/pyT83e/c67EGMPW+idmAsfDySmQRtd1hh8NlcXjcQahEcLWbosUZDsAYSHWanGWHwwYH88w4aLxQEJBLpPJBzCbOt60n41EoLfbpKC8S0s1lk5/xMVTBehD52Ftf8dao45YLCaRRzr9AfG7o8gV6zDJa4hcuoB8Pk8R/iprPpfr5ROgFKqqshczMygsLsJus8Hv9yMUCiEcDktk0MX25hemaRqsshtDh4cloSODRCLHlO1b0N0R+L1AQ63j8o0kvF6vRCzMvi3Q4zeaDdba3+Mqxsrlsjg6RVokK5HxaCIpxAGQATNpJAgs5OaNWwdkIO3JJPwLFrHpRoSbd27jkNVG9y7oFdmFZZbJvsZGrQZFURAIBBCNRuHxeAZ5mHtyhQ2PaHjzvIqjPhdOnnYhM6dg7FwNL6eP49iRXxi7dh8+nw+yLBNPPc4TiSyznXiMV89auDqRxepXC5TwU6jrnzFyZhqm/SKu35tCKpVCtVo1vDhEBWKJQcouvyc+u0vwKmZRcGsMGM1ll2Ox+l3naLf7zzkoBgLwmMbt4BgIYOYd/19QH7vY0XaMG48scZJ5Qe9WVvC7tYvqtwp+btYRDAZhtfYT9doovnOlUkGpVEKz2YTL5YLb7YbT6YTD4YCN/wO73d6TzWYzzwD8AWxZOo9SrXqTAAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>966d7227-69e0-4b7a-8475-b89ad21a972a</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( SimpleCompanyWebsite.Article ( HeaderSubtitle FontAwesome_IconString Top_Level_Is_Link TopLevelIsLink_Description Paragraphs ) SimpleCompanyWebsite.BaseItem ( ) Native.HierarchicalContent ( TemplatePath ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="4ae79785-a951-44c3-bee2-2222f513753c" ClassName="Paragraph_Employee" Namespace="SimpleCompanyWebsite" TableName="paragraph__employee">
+      <Globalization>
+        <Lang LCID="1044" Name="Ansatte paragraf" />
+        <Lang LCID="1033" Name="Employees paragraph" />
+        <Lang />
+      </Globalization>
+      <Properties>
+        <Property Guid="e7c3e7eb-b22c-48a1-9c29-52aa241c8a8b" CodeName="Headline" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="f8c69c12-d31c-44eb-927b-b27dd43c0398" Key="Value" Name="headline" />
+          </DataValues>
+        </Property>
+        <Property Guid="e9980337-9f07-4624-be3c-0fe382f5429a" CodeName="Employees" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Globalization>
+            <Lang LCID="1033" Name="Employees in paragraph" />
+            <Lang LCID="1044" Name="Ansatte i avsnitt" />
+          </Globalization>
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="30c4716f-70c2-460e-ad1e-c6cc6a07d5a0" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMUSURBVChTdVNrSFRBGD1zV01dwbQ1yzZ7WKEbZeEGPRD/SFBEpRREiRaWEAVmrx/qRvYAe5mEhVlEYlikIKj1pzAzH5UJEUubGZS1uLmpq7XL3ce992vudXvTgYGZb86c+b7zzTAiggrWfiGZOo3FwLMry3mQR2OLHlGrfIuYGpEkSeO5XC5A3S7vIUqxzKNH7lbCi6tmlaGdUwejoTLqbmyEKIoQvSJ0a+eMHrdldmF4kYKv7S1gg4OD9ESXCJPhKS53VYKpGmkFe7RbgAI8KE9CIBBAQApgU5mDCT6fD3011/D8tYwpJTYkbD2Iuvi5uD5rJm4WRpDg8XgwMjKC9fXp6Cgw4lDTYtic72F3foXT5+dZBYv9geTiGTRz9nzk7MzG+IhrkhCsBSv3vWRB3k+oBC5Roy3azp2H3++HJEtYVzIInU7HGH05Td2372gEFWoFXq9Xq2LDMTsnWAuJTCYYSleAvOP4ePoN1lddR3l2JiImtkHgdKhpJsfHwmici40nL6DucD3ya+s1bwVVtvROFBryDDizIRHh+mnYVbMdSw1xYIyBybJMIUU9CIuMxYplX7BjdSdWTc+EXXDhRNmRf3xgh17uVkzJKaiqqIbDPjzZYNWHv9Fx0URut1udapz/DdZbnUbmvFxAloOX/AZ9UXDyC02WeMzedA9ms3nS9J6qVKIPJdR1aQkXJPL5JXr1fpy6rKPU/+kbX8ta3OPz0DvnW3K+O0qyIlNdkZ4cDgcJqvH8NSAsLAx++RrCj77AWGg00hboUfs5CuUtDciwLERl7ykkxS1EuyEVKRYjPLz1Q0NDCNEEOHi9cHsIJYsGsKUCkELDEamIeJjVj+yEdchqrsYn3QCsfW+wd0060NyondNcvn8ykRRSsHGsAW2WVVD4LxIUwDY+hsfdZxETY0f+6v2QIiUoOhm9r62orjuP2j23/2zT5qv91Gyd4LLc0ClRCNE5kRSeh/wDORDEUEg82wnRBX1MNESfBzfO1P/T57/BDt4qUO72NUIOEBJnJfAXLMD2dgAxU6ORm7ET3wG73cpesVTN8gAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="9e9050f8-a3e7-4e99-a226-789abe083b67" ClassName="Paragraph_Testimonial" Namespace="SimpleCompanyWebsite" TableName="paragraph__testimonial">
+      <Globalization>
+        <Lang LCID="1033" Name="Testimonial" />
+        <Lang LCID="1044" Name="Anmeldelse" />
+        <Lang />
+      </Globalization>
+      <Properties>
+        <Property Guid="c28bb8d1-86e5-409e-a934-581c9ed490a7" CodeName="Headline" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="fe305a34-5312-47cb-9349-5387f2dd3b50" Key="Value" Name="headline" />
+          </DataValues>
+        </Property>
+        <Property Guid="22c779d3-9029-4f8f-b42b-a8929348c780" CodeName="Testimonial" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="ed2ddbf4-f985-4bd2-aa1c-9c8886fc052a" Key="Value" Name="testimonial" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="6415a6a8-37e1-4dcd-8244-bb9b7d94bc3d" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKqSURBVChTjVJtSJNRFD7bFPNj9gEmRREWhoFSYvYBEX5EokQUFdUPkX5kZJpBfwR/1H4ppA5RjEADI0iYGU7wY/KSuIoKnOZaopSByxnOOdlH2/veve/tnG2pCYIPnHvOPfe59z7n3Ku6UTeYAQA6FeccFj0iB8z00kSN6Ti7K8CJ06e/m5dQ024+KzLZB7RMZrLMoeNhRi/SCVWvaormVEteSajr+pw9v+RLxGQjndrpCUjc4Q5wTPLwfYQBWwcPKSIQw+j2S4ILtzo9okAx5l4QkYz0GH8urIA2XgNxMaoCzBW0VOaXkmq70xdh4Q4d+aaecS6FZK4z3OITDhO/rs9au5Nws35oH7odLPaBtex8FXSaWoDqaMLkoTAjAiPW0xGNQeX5IwkhBUDGkxSFgygy2J+SVBhdR0JAEgKSAlNzy8nPh2zHKClRzwD8aOegodsioDCh9ImJYYkcy+VYLqcYr59RP7ySXTgyOQ8spARlvErCQcQ7g5JMh8VqpredThn/4RzEiXw0bdcZ22w/LLIPMDrzEsa+GCdWnyfaj+kLtdkYRnDy3h4eQ+esg8258tvQNHy7NjpvpD40l5dkZh5P3w2rLYsG5EQWgndfHWAwfzdjfx5HVtZAb5WWg5upV2KIQ5ApEEDzYxE+EQtRqSH3cCpxD9KwEaSgu7Uib6c2IRaW/Sxci/61Jac498D2LajqUaOsq5VtI4/KGoZdalDAOusEu9ObuEVVWf+aNIYWX/10VEJ/H83MmJKahKrcUVXvrX3waaofPH43vhmDExnFSEtX/vtt64E/7xq69mfV+cnVLZfgckkRgEYNF49UQaNQDhpsX9cbY5CauBkGaLjT/DY4bbdKMwuT8O2XJbzAZBb2hE0VbMSpyr316CrQtGhetLaPrY6av/AusmSMwmfnAAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="ea1cbbc0-ebf1-4201-a09f-ced1848597c1" ClassName="Paragraph_Service" Namespace="SimpleCompanyWebsite" TableName="paragraph__service">
+      <Globalization>
+        <Lang LCID="1033" Name="Services" />
+        <Lang LCID="1044" Name="Tjenester" />
+        <Lang />
+      </Globalization>
+      <Properties>
+        <Property Guid="897411c9-7f81-4dab-9335-a9a81e62dee5" CodeName="Title" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="f375e6bf-3dd6-4d6b-b64e-87025e04335a" Key="Value" Name="title" />
+          </DataValues>
+        </Property>
+        <Property Guid="a69790b6-4dce-489c-80e7-4db7dc7e273b" CodeName="Services" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="a7137566-33ff-49af-bfae-653994675fb1" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAKgSURBVChTrVJdSFRREP7uumqRWdaTUERFvSgVxK6S9iNGv2YgyBIqQan1IJkEPtRLCQlJD0FCD0ahYlkWUVYaUkqiYgniboIbq+6ai7u0f+r+796dzjn3ohj01gffZWbuzDfnnBmJiNA9aKakmT2DNN6eDOnd1ymKRYLA0dpcMs0GSOT8LCulFqMNO+obIEWjUZjMDvIsxyClbgV4Bq978WmcmaQEKExkmZ2nnLNVpEEELAy8fD8kfmqcPieGJm04lF/I4xBdOGz1dRSxz6M/moSKtlYMjVsw/N0I6dpbA3mXXch+mgL7nB1ulxdZDfdxofQ8DJdqoPk1vYS5bwF0plvhPFCJ6b0lkJiiwx0Tyist+ImE8RdWXkP1EY/HEQwEUFak50LQ8I8sy8jqaMLuploc2ZeJxUXfqiJXeP5xjPjlOa/fvEdef4wetvWwAEFb/aqYfEsu/MjTwLHgxMaLVXjS2YeUFNGBnYFVCUtF3Z0mbN+VjZRUDWoqTkna040F8Np80KXdgtlsQpZ+AytTsxkkj8dDjzp6UXg4D6GIDJm0SF63CUbjsFAQ12xu76X2ztdqzSpGP7RIyvhU8rn+CwnGx10DpD9TSbcfPOMhZbqqmEAkEsHM1cvM4I7CxoKTGBkZhcPhQigUgiRJ6OnrR25Rtbj8GoEwSwjb7aqnwDptxYLThSV/GIZzx/GmtRnlhhLRnUNzpauYxNIxlp/IwY2DvPUqUovvIhJLsAdKIBCOwx+U1T8KNF6/SzUV+Kw+1VIwNWVCkBX7w4whGcvhtQJiDBaLBW63G91fxpCv24+4TIxshxLE9oiQlr4Fmdt2Yn3aZrZshImJYfCp8CloMzIyJJ1OJ9Qsv0H6vGPo+TwgfIEkwBsIwmueVAP/FcAfd0iaJ6WkGOoAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="decf5c3d-3575-4e3c-92b8-9f3e0523b793" ClassName="Paragraph_ImageSeries" Namespace="SimpleCompanyWebsite" TableName="paragraph__image_series">
+      <Globalization>
+        <Lang LCID="1033" Name="Image series" />
+        <Lang LCID="1044" Name="Bildeserie" />
+        <Lang />
+      </Globalization>
+      <Properties>
+        <Property Guid="8f2afe8b-1d7a-4a80-bed1-3a6e97cbd597" CodeName="Images" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="61a4bc12-1d7f-42c4-9f22-cbe5873529cd" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJpSURBVChTnZLPS1RRFMc/982bH82b0dGxUHQmtdBxyLQIBG0htmmh0SyDIKlNYC5aCAWtgvoDIhczmygIpI3ogJtICMtFBRKCWSYEZRZD6WQz1ryZd7vvlUWG/frCgXMv53vu+X7vEVJKbGgjIyPyI0X542bwxmU7k2JsbEymxRE6GiULQqBnMhleLF5j9aGPlkgF3zkb0HqvzMuh2zgdbdAzcEoufbbke8uS+Xxeir0DSVlf5WVXucGFEz0wPj7ulG4FrVAoMPPyDSuq3RMT7mUt5otqQHU2TRM9l8tx9Php/OVhgtEgobAXwzDx1tWT6u1HJJPJn+fchF90bIZdsGVFOp1GWErfuUnBq1UwvNB/GGKaRWrqOfHsPEKpkIvCTUyHx1nIu2C7r0Rm4Rmv5+bQisUi5y8eY/jONG3lim1IdusuyjSPI1Nks1nZ1T+EL+TDDJgElMRQdYiWihpaqUK3O5Q1dlDmd6sZXGhWgVZ/FWvZIqb/3V/4YP/Ft/y/4DTo6+uj49IsJeFBqLXxaCU0TSNfkPh0SVeTRqxO8i5XImwoG8x1Tnbuc3zUS6USdpw95KH7QLPT9dGSpcRpLNm2KU/jUUE8KFhTy5ApSu7ef+pw7NBsq2wjJiYnuHpzmHX1QGcEmhokB9tgsF1jfwXqXqL7JDUB6N5pORxnm+x1s5MHM9eZni1yaypJfW0Mv99PpKFJvWhSa+zBKkWpDH8g0dxOtU99ieLYXH1jAhE8w45oHI/fIhwIOV/iMnUibjdBTYWh0xDaxsong+W3y1RWfp1ApFIpmUgkHO3/itHR0T+v8+8BXwBkDkMaV68sCgAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="61a4bc12-1d7f-42c4-9f22-cbe5873529cd" ClassName="Paragraph_Image" Namespace="SimpleCompanyWebsite" TableName="paragraph__image">
+      <Globalization>
+        <Lang LCID="1033" Name="Image" />
+        <Lang LCID="1044" Name="Bilde" />
+        <Lang />
+      </Globalization>
+      <Properties>
+        <Property Guid="89876a0c-2269-478f-8e64-7ad2f1bc4423" CodeName="Image" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="a35c8fbd-4572-4de0-adce-f2af8a98b878" Key="Filename" Name="image_filename" />
+            <ShortString Guid="c10326ad-a115-40ec-9b27-2c1cc6e3fcf6" Key="Type" Name="image_type_name" />
+            <ShortString Guid="0d083e92-3a8a-4be6-a2a8-dae54f55f83f" Key="Extension" Name="image_extension" />
+            <Float Guid="1a6d0116-9284-41b5-9fc3-c299f0dfbf8a" Key="Bytes" Name="image_bytes" />
+            <LongString Guid="37e6025d-fa1f-4a3a-96a0-5546379d14f1" Key="Info" Name="image_info" />
+            <Integer Guid="9cddc339-1633-4ef9-bbc0-92356ecd4b0c" Key="Reference" Name="image_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="40e2da4c-9995-4be1-804c-d4a845e34e95" CodeName="Image_Text" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="59e15bb5-358e-4dfd-8581-c9af634c79c7" Key="Value" Name="image__text" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMuSURBVChTTZJdbBRVFMd/dz52u7ud7Xa/VykSW8RQiSZowIZowpOoMTH0USIkhgeD8aGC+uATmGrwRYkPRBHUGKI8SBS0idboA8EHbQiEaJuidt20u92WQvdjdmZndrwzI8Zzc+feOSfnf879/494cnzPdKGU360US4Xdbx66H7H/pec9BYGwrU+8uYUW4oD0nDy4mStKlpm/n0FRhcJ5PYHx9TR9xY/DHIFvgp7bQ1jWaa9nVfnq+kG2bV5GESKF002yKbuGrrooFxeW+KbWgl9P4fkFfYyT7zyG/tol2ke3cn5mP42Ox8ptk2cfNyVEUCCGM7mDxKuzjA0dY7gQYXRDH6oPqci2FCXPTzWbL14eIXdKMJx6l52XDqE5Nprr9JhfLzJkFNloCJYmBOlGj9UDewNsse/F5zxVVcOf4Ouf/oLq0vIPouOYXmvqMM72LJXFq0z/dZy2DS3LZW1mEsXPcB8pEZ24StxIko6rZPtVCklNRmR/IXCE7uv3kVEKlJIL5JI6uYFIEAoQhBKDQhpxtMwG4wNGMpfZlj0R9mI5HW+x/hlT5TmEJDtXbfOwtcp8J8bnV1SUVrfJd+UyeLL2/DLbv7zB1L1buDF6jw+OWGnVvbpVC+F8hxA4bYtIPMbkG2+HPHz03mnZhwz0ukFWaH6CJ1fITltW8n2+gF7P97u8cmQCzSfRxWF95QTNRpX0WxXWxqR6e4aYnb1GxT7MH7Ucif4kKzcboOmYsoMX9vaha9odsUOq/G0fG0X9pUPk4i3y+SIjqTOSV43BuBbQVwgo1KX+XpD3L88QjQ7IW0y+UU7OxBZoKiTOmmQHDTYNfEomKUmS4uSkSKWUHmZJPpRACGmOrUtV+qXTYPa2y7lHB5jRBfaHHTxtjruNcwz3H2FH9gy7ysfRzGYgohxpieV5/NYwuVBZlLvG7+sumhZnfleRygMpRt430c5+z63Lgh9vtriwNUUvYQSFJQcC0zXpuDEy0RLpSJF0X4HhP9uM/VyluzHD9fEHuas5xOrOh4ilSwxGB3HtbvAM8fT4U9/m8tknVN0fvlBr3+6c/7f/fPLiOC71Wn3qHxapJBo5Gzn+AAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="30c4716f-70c2-460e-ad1e-c6cc6a07d5a0" ClassName="EmployeeContainer" Namespace="SimpleCompanyWebsite" TableName="employee_container">
+      <Globalization>
+        <Lang LCID="1033" Name="Selected employee" />
+        <Lang LCID="1044" Name="Valgt ansatt" />
+      </Globalization>
+      <Properties>
+        <Property Guid="0d1416d4-e6b0-4662-aa27-63c8591bd491" CodeName="Employee" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="ed539856-4301-4b91-9d42-24a128c7b16a" Key="Value" Name="employee" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="587718a4-c62d-43f0-83b5-59725f604589" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANySURBVChTdVJtTJNXFH7u+7b0awVdRSoQYlE0ROtHXWYmio7NDflh3C9102yyZIZQDSRGI8xE44+RkS37SJaoyX4MTDTZArpMjWxaZX5EsXNEYOo621IKVFpa2vLS9n3fs8uL/tiP3eTenHPvc55zz3kOIyJkZtLExqLTJA00gjU0NFBDTQZCYW0bfnCIYA6Hg67tMkB68xNUxi4Cs0GR8QDFvG2kyklCa2sr3e/royfd+ykyFiKxUvYddz07C+diEd0DCgS1dgQLPtqG4dLF+Fo6AxadCFG+WYdcMgCjbTlYe3s7/Xbdg6rsECxiFHtOngRCl1Fo0uPcUCEwODhIFj3o7HozNVUUU0vvMbrz+Qb69PAS/iECc7f102D/UlgLdOj6VoEUPA0mlsBYWsv/rEAr9uUiRSIl2Qs1Mwxlxg/KBHi6UIjcbjc1HjigUd7t/JDG+07ThS/enUvhcrlohU2PD+aFMVxzBLvtXRD1JuQSUVjfv82EsckkPnPFsazcgvTQPZgnYzAm04gEI1paYdE8E450PIbn0lPk1q1A05Qdf/hj+Mq4TQPoHFt+wbTVgjUbGzHf8ASsvAjRZBYp2zjUXIqYraqftq514ujmzVj+xg4o8nyYSnYATMfLkiFM/O5k3xwLwsRykOJ5SAUe8UeRk8+Vz2FA4cIylpAEspa9BtVuR2b0lNYDNTvMxYlGqb6+HoIg4PWqauQZjLja3QX/yCiu9PTAlPLiwbmPYS9zwmxZCJaVMPDoBnTOZmzf08JYdXU1JVISFokJnHlHRmlJPmAyIDHyHD/N1GDThmJUZG8DRn4/q4osQ45H8ONzF3Y1f8eEgoIC/On1Qscvg74cPL0x3OwZxc+Xw1D1pbC59sH3OADZNwTF70P66QA6vHo46w5pNWpa3+/3U33LddgCHrxleobpV5fgnm0vJouCWPneXZSLFWhadRAP/nmIU3xYUiyMOvY23HXNjH3Z6aPO8xasrSyCzqogLoRxYvVuLKu7CcbYi2byg9vyzATCD09A4T6RCoNogG6LywzPrTv4K0DIE/KgF0VkHYxLlIIU6gCpxKcvhlx6HAoTkP9KMefLgUvASeT/juvL9ff5jbR0Z68G4ofWPE7D3RHewF/5WCd4gtk99T8E32+i8r2XoCRvzAG1gPgLe1ILJGV2T+FfAfvCGoGYuMoAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="a7137566-33ff-49af-bfae-653994675fb1" ClassName="Service" Namespace="SimpleCompanyWebsite" TableName="service">
+      <Properties>
+        <Property Guid="916eec50-ba3b-494a-9f0d-b2be86eec574" CodeName="FontAwesome_String" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="e0105f6c-711d-4079-8162-c286c2a456c7" Key="Value" Name="font_awesome_string" Indexed="True" />
+          </DataValues>
+          <LoadByDefault>False</LoadByDefault>
+        </Property>
+        <Property Guid="5bb1dcd0-881d-4358-8953-4000fe6809a4" CodeName="Title" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="5b59e42b-98d8-4def-99f3-1e524a2e41d7" Key="Value" Name="title" />
+          </DataValues>
+        </Property>
+        <Property Guid="2662028d-70db-498b-bd15-4580accf6c3a" CodeName="Blurb" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="b1cafab1-267d-41bb-b2d4-e4339c41c7a5" Key="Value" Name="blurb" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAKgSURBVChTrVJdSFRREP7uumqRWdaTUERFvSgVxK6S9iNGv2YgyBIqQan1IJkEPtRLCQlJD0FCD0ahYlkWUVYaUkqiYgniboIbq+6ai7u0f+r+796dzjn3ohj01gffZWbuzDfnnBmJiNA9aKakmT2DNN6eDOnd1ymKRYLA0dpcMs0GSOT8LCulFqMNO+obIEWjUZjMDvIsxyClbgV4Bq978WmcmaQEKExkmZ2nnLNVpEEELAy8fD8kfmqcPieGJm04lF/I4xBdOGz1dRSxz6M/moSKtlYMjVsw/N0I6dpbA3mXXch+mgL7nB1ulxdZDfdxofQ8DJdqoPk1vYS5bwF0plvhPFCJ6b0lkJiiwx0Tyist+ImE8RdWXkP1EY/HEQwEUFak50LQ8I8sy8jqaMLuploc2ZeJxUXfqiJXeP5xjPjlOa/fvEdef4wetvWwAEFb/aqYfEsu/MjTwLHgxMaLVXjS2YeUFNGBnYFVCUtF3Z0mbN+VjZRUDWoqTkna040F8Np80KXdgtlsQpZ+AytTsxkkj8dDjzp6UXg4D6GIDJm0SF63CUbjsFAQ12xu76X2ztdqzSpGP7RIyvhU8rn+CwnGx10DpD9TSbcfPOMhZbqqmEAkEsHM1cvM4I7CxoKTGBkZhcPhQigUgiRJ6OnrR25Rtbj8GoEwSwjb7aqnwDptxYLThSV/GIZzx/GmtRnlhhLRnUNzpauYxNIxlp/IwY2DvPUqUovvIhJLsAdKIBCOwx+U1T8KNF6/SzUV+Kw+1VIwNWVCkBX7w4whGcvhtQJiDBaLBW63G91fxpCv24+4TIxshxLE9oiQlr4Fmdt2Yn3aZrZshImJYfCp8CloMzIyJJ1OJ9Qsv0H6vGPo+TwgfIEkwBsIwmueVAP/FcAfd0iaJ6WkGOoAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="966d7227-69e0-4b7a-8475-b89ad21a972a" ClassName="BaseItem" Namespace="SimpleCompanyWebsite" TableName="base_item">
+      <Properties>
+        <Property Guid="df0d5fd9-2625-4255-8e78-162d941c0d8c" CodeName="HeaderSubtitle" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="d2464068-486c-4a79-b12e-29377f9211ac" Key="Value" Name="header_subtitle" />
+          </DataValues>
+        </Property>
+        <Property Guid="b2b6fb28-2859-42e2-915d-86d09e2d8021" CodeName="FontAwesome_IconString" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="e686a5ad-e020-4a05-aa1a-f179a25dcd74" Key="Value" Name="font_awesome__icon_string" />
+          </DataValues>
+        </Property>
+        <Property Guid="fdfffc5b-7ed0-4772-8292-ec355a262999" CodeName="Top_Level_Is_Link" PropertyClassGuid="68bb6e0a-f394-4311-a6d4-cca8c9534404">
+          <DataValues>
+            <Boolean Guid="b148a161-e2c2-4d00-b57b-5a5d068f9c57" Key="Value" Name="top__level__is__link" />
+          </DataValues>
+        </Property>
+        <Property Guid="3896a89e-b0d2-46bc-94cd-dc77c47e8271" CodeName="TopLevelIsLink_Description" PropertyClassGuid="fc40e8d0-daff-4017-a658-60095720bbb8">
+          <Settings>
+            <String Key="Text" Value="Determines whether or not the top level article is a link itself. Only triggers for the top level element." />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKbSURBVChTjVJLSFRRGP7u9TU6PqehKcvy0QQqtamgiIIIWlREuqtNRGkLy5IoE4MQaREIhSBkuFASatkmocHRlPCFj9EsmdJxQlNCJ0ax5t5z77mnc446PXTRB/85//3P//33fymMMQio4ihpv8iiFqVx7AkLa8uAsFT3V7Dy9pKw0KWvI9aJH0tamnRd56xDqRm+y7ITc9AT6As/Pd2cIT3KOi6xODUBExOTiHGcT2QfPvuRszUPTUUtSjRGre+ew53kDo0sjIYeHa13SiOH/Gur/xmLM9XQ4Ld+UItsafDVRf8cK47eYD/yXfn4pE2BmAactu041XBCJ4TEy0IuvChmRc1nuMpwsv44PVZ3ZEXoQjbU8S9kDgK1w1Xsub9xg7dS66tihmGAGAZzp+1RhmZGvuu6rjada80QDioxCPKS88AoUcYXR5Fgi3VENC1d0jlkDrc6rjFLJTCoAd0yUODYx8ulqDz0QFFvekuZPSYZEVOTohk6JoJ+eHq9MoIa0XTM67OwkRSE535K9vRsEN7ybkU6aBENKws6vszPaK8utynevk6Ld2he0jk27QOvbNyyaCGlFqOUtj08/Pjs2tMGRPv0J/gIsnPtuci0ZSqarietmTeFzKBmpJLttbthMYsLHxEs3gV+8m+TmqCM8rFZGAgMoaX4paxtHTJAdV+FSBWpcWlw2V34GBqTJNFKyoniLnDux9RcAF8X52CaJheK16We3/socN1zlRVuK8D7Bd9qAEFeC5Qan46slN1SF4yOgbfw3uhaDVD25gor5OsonoLL09iZnBUtR9yBpUnsSslB12A3PGWdf5UgmxjhoxIbQCiBKzET78Z7cPtAtXLn4H2lc7ALO+xZfAH4Eui6JP2JTcf4/wB+Af+Tia135KRNAAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="587718a4-c62d-43f0-83b5-59725f604589" ClassName="Employee" Namespace="SimpleCompanyWebsite" TableName="employee">
+      <Properties>
+        <Property Guid="5653f445-7bbf-4fdd-a384-238502b3574b" CodeName="Description" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="248b99d4-02ee-4761-a467-bb66c05da7fa" Key="Value" Name="description" />
+          </DataValues>
+        </Property>
+        <Property Guid="9486ca01-df77-4695-aa97-b5fc1b803d32" CodeName="SocialMediaLinks" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="374198d5-2ae5-4f72-b189-d5924647734e" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAALjSURBVChTpZNbSNNRHMe//13a3+0/N52X4Y20i4IZZQSrMIZCZCAU+FQPSi+99FBo5UtZkJIQCVE9JGUPQoZNLBAvYJpYiRq6eZlLxYlmOueurs1t7vQ//w0y6CHoA//DOb/f93c7nD/+4MN6F4ltedrMLwlPpXC43VpFGs21gltEl5mtCbhdmzh8MWdXzG567e2k+vnVaIjVatWnSBJwprREcIoduUuLq+Jl9Jt6YHo77xOslNeTzc0j7kFyuaOUtHS2dFEb30a0KqVAc9xa13oX8bJUnCsuW6M2hmHA0E2fqZeMsV1QxiXxRRh4txw4uKbDhdPljJAh6IlkV2hqIJ1SQ2pU4hJ3HTvecDb1/Rt8M9pnxnrSu2EgJ2/k0zvaG3NFm7Rtb5wds45CzSYiJS+ZmiroQhEEqWzKK5U7HR8X30OXfop2f0/w8jB8OubTdH+Ey5TBGfAgWa5B0C5BYXahMKHEE/Zmt9leIEuagSRlGkyOTcxOWuB1efVKtXJAcudNVWTBb4GIESOcEITX58OkZQI9ke5+WgGzS7OSLb+vun3AQJoGHhNDn4GEd0KNxgkTK/RAl90MerrVGrmmac5nLv9mn4bMxuJYYtGwmHBlJ/J09pjs7/hJoPJRz31SP3STuD0O4vZvkqfWOlLysIDcenKN3l9tTErvNjqkcIohgWTI7fJ0fLV8Ob/JVGOfNhPLq+vIycrHXvWBIV7yLqoUHsLvN8pnE/GfOELI0aKCEr1MHAfzpBkj40YY54zYdvmRm7b/CC/VU/1uhDb44LjO0Y4rS5GZxoRcORRMClRBBfZIOYRFYQSIB86wDbZ5Nw5JdQ/0hcUNfAcuGiuM0Pq5JXXxx3zjlHgY2q0MKORycGoWHKvAz20/Qv4QHG4XzJZZTKxbakQ+qZYvaqUvQhiBY1SIDyVBNK7Eiuk7wmwAMpUC8mQObCIHEk+wsrAK6bwc6Vwa/0s6jU6Hs4HG/ifAL6mnQ5OYMTM5AAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>682b23ea-2712-4c4f-82df-04b4e3f54027</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( SimpleCompanyWebsite.Employee ( Description SocialMediaLinks UserName Password IsAdmin AllowEditLogin DirectMemberships Forename Surname Email Gender Birth Company JobTitle Street PostZipCode ProvinceState City Country Mobile Phone IM Website Photo Signature Comment StartSite PreferredLanguage IsApproved IsLocked FailedLogins PasswordAnswer PasswordQuestion LastPasswordChangedDate LastLoginDate LastActivityDate LastLockoutDate Settings GUID Files Orders PreferredUILanguage RestrictLoginsByIPs VisitorId ) Native.SystemUser ( ) Native.HierarchicalContent ( TemplatePath ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="6415a6a8-37e1-4dcd-8244-bb9b7d94bc3d" ClassName="Testimonial" Namespace="SimpleCompanyWebsite" TableName="testimonial">
+      <Properties>
+        <Property Guid="89acb27f-be77-4b28-9020-cc2ebb46fadf" CodeName="UserPhoto" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="1f737493-bf65-45ff-a6fe-23b492746dec" Key="Filename" Name="user_photo_filename" />
+            <ShortString Guid="fc838529-ad41-43d8-89e4-dce584cebb2f" Key="Type" Name="user_photo_type_name" />
+            <ShortString Guid="2a07272c-8732-4078-a5d0-a2f52cca4643" Key="Extension" Name="user_photo_extension" />
+            <Float Guid="bb978877-9618-437d-ab7c-52e8db5c3e1b" Key="Bytes" Name="user_photo_bytes" />
+            <LongString Guid="2d02d758-e081-49f3-86a3-07a7b9af92c4" Key="Info" Name="user_photo_info" />
+            <Integer Guid="d484d0ca-c6ad-4ba3-bd51-a3d4fd502cb1" Key="Reference" Name="user_photo_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="2d061a1c-6c3e-43b1-b2da-54377f91ba7a" CodeName="Testimony" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="22e2f26f-4082-4e78-bfb6-0b93d9088f77" Key="Value" Name="testimony" />
+          </DataValues>
+        </Property>
+        <Property Guid="ed5f9c25-1279-464d-8681-315e7ca03ecc" CodeName="UserName" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="763efa30-d40e-4a88-9d5b-4c989404d631" Key="Value" Name="user_name" />
+          </DataValues>
+        </Property>
+        <Property Guid="faa65802-27af-4469-90a1-b17f5800b030" CodeName="Location" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="5d27ce84-7db3-4bd8-9164-c6818c9331be" Key="Value" Name="location" />
+          </DataValues>
+        </Property>
+        <Property Guid="41523af6-128d-4576-8c18-976cbea8e322" CodeName="ContactLink" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="53b99512-2d96-4c75-aefb-231579525594" Key="Value" Name="contact_link" />
+          </DataValues>
+        </Property>
+        <Property Guid="1b4b5c9d-4373-49f7-8959-29454ee40ae5" CodeName="DateOfTestimony" PropertyClassGuid="af7f07f2-d2c0-41a4-902c-ee3e2f110ef7">
+          <DataValues>
+            <DateTime Guid="17874142-c759-4a49-99cd-6d603e54ed8a" Key="Value" Name="date_of_testimony" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHESURBVChTrVI7SANBEJ2LIEHkCtFCUBE/jY2kSSlYqIUg2PgrxdLKShBrbcRCLAUbES0ECzFi4QdE0ELFD2LOYEj0iJp4hkQTk9txZnN3RIMo6oN3uzPzdm52dhREBIaLP6EnRMejmELg+mEQgD3Gi8BgTNA2T2KjwOHqn9zI6nFE7UEg7b2cfq1SVUB1Kyw4lUn7JnwBXpkyB0nLKKoTi1lmYXNxtKNdqoZnt/HWEHgTFXgVMfHsziQ3ImXqlIJ86rEkB15tu6DMz/iZgIpcoP1AzuWgkYrU+Eql3LhIXGD4SWDgUaB2b+LY/D6dRdnnMpeiQDoLFhGSbwBqiXVjVi3tXLFa4jjkXNFPS05gk5zanO+cg+O2Lz9YRxyybZt/78N3kNPEoF6tLu/6MWsKzvgl1w5ueE78RNkGmYCMmnLV3dXT0gjRpAL6M0LYQAjGEAJRBBouuIwIuNAFdHprwVNf0UDH2pwEhNhjPEX/pkvT3Nn9lswgpKw3yMriABKpjDzDH6cHVAXP5Ayxl1jEvjZPNQx2NPEWjEQaVvauYfModEZmtxwDwpdNpIRTrc1VI1sn4SSZ43RgOhf5iP97hd8B4B1etGg4nZWMuQAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="12a94109-7b36-41b9-8a8e-510e5a94dd94" ClassName="Paragraph_CallToActionLink" Namespace="SimpleCompanyWebsite" TableName="paragraph__call_to_action_link">
+      <Globalization>
+        <Lang LCID="1033" Name="Call to action link" />
+        <Lang LCID="1044" Name="Kall til handling link" />
+        <Lang />
+      </Globalization>
+      <Properties>
+        <Property Guid="7e225b4e-d7ea-40d3-b96c-a22fcd6abcf7" CodeName="Link" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="16a1acf0-4116-4759-b6fc-13303a54c920" Key="Value" Name="link" />
+          </DataValues>
+        </Property>
+        <Property Guid="916876cb-25b5-45ff-9b91-e045580e66ca" CodeName="LinkText" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="3ff269a8-d5fe-43d4-9d2c-c395d2d343a3" Key="Value" Name="link_text" />
+          </DataValues>
+        </Property>
+        <Property Guid="75b43348-d2b1-4df9-a81b-a4c6928c0bbd" CodeName="BannerText" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="a0dc6243-96c4-4337-bb18-78f1f5259ae6" Key="Value" Name="banner_text" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKNSURBVChTjVJdSFNhGH53NqdjDJaMsOWKrSlsi5HTDS+KRrENgwXuxosxAw1MxLt5IWUQiWRCEngRRJE3XgTrfo3aFiq6VGgbM3+YLffDkqRim/rtnPP1nZMZWGM9cDgvL8/3vM/3fK8AYww8uKKzsxMfdQQul8tfY0/YhVxHLBbv6vX66ba2tv4jysziI/wDFeGPyiGEwWBQmkwmN1Op1GRLS8s9SqfTpSORyJl3aAqMRmM/P8/9VIefzz3A6hFY/UvjOHiC1+v9lslk5mUyWYdCoYBoNMp4PJ7M+Pj4IE+wWq0XmpqaZmsvx6RX9B4oszQc0AimQiM0P/P4Z7gv2Dl7G5a4uqoH6vBfEbzCwMDAEMnp4crKSrtcLp+RSCQn/H6/KhwOFymTyXSdEIZ9Ph/T3Ny8kM/nNbFYbMFsNmc4BYqm6dOEOVYqlVgSI5AIQeemOgqFAm9OQE4JtVrtplqtbrD1GuoQU4bs9234mI/CXDJAidbW1hhCVHPsl+8f431y/yIqAUv875Zw3T9zuDF9FZ8aBjFXV82hGqrmVA28g9bWVrFSqRy12WxDXV1dUCwWIZ1OQygU2kIIpbu7uy0ikag2l8vB8vIyBAKBiWw2e4fU6LeDUYvFMkhR1K2+vj5pT09PgcQLTqdT7XA4LsXj8dqJoBtPbwwCx+G43BnuIO+AbLyORP2KbFWDSqViybT68N4ksCRyRDarzDCgrNeCsfEiRD69hQ/bizj9TH4+EV9NVAzx5gsTvmbshdTXDX49abZMhMrEgRhOyhphNumHxa1ZVFHA9UTD7CNEHCDg3vacwkC1a+yw9Hke3qy/jiIaLNkxfPDfz6i5K9hhWKFij2Vqvoxh+lcX4Cf2am/8tDRY9gAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="618b2529-f69b-4e58-bc11-48f1917b339b" ClassName="Paragraph_Text_Two_Column" Namespace="SimpleCompanyWebsite" TableName="paragraph__text__two__column">
+      <Globalization>
+        <Lang LCID="1033" Name="Text paragraph - two columns" />
+        <Lang LCID="1044" Name="Tekst paragraf - to kolonner" />
+      </Globalization>
+      <Properties>
+        <Property Guid="e0ec85b7-ab09-4fc9-bf5a-cd4ab4e6b050" CodeName="Left_Column_Headline" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="4b230858-5686-4b26-b82e-df1881956df8" Key="Value" Name="left__column__headline" />
+          </DataValues>
+        </Property>
+        <Property Guid="0e01d547-4ccf-4429-9c78-5dcc628ac0f5" CodeName="Left_Column_Text" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="5573f91c-2bf7-47f3-a843-bc3d8b88909c" Key="Value" Name="left__column__text" />
+          </DataValues>
+        </Property>
+        <Property Guid="59541c95-50e4-48cb-92b8-4f595111a0f4" CodeName="Right_Column_Headline" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="2789e0ec-40e6-4087-aef3-f2616ecc4b34" Key="Value" Name="right__column__headline" />
+          </DataValues>
+        </Property>
+        <Property Guid="ffe27a56-1aa3-473d-b684-192c68ab2887" CodeName="Right_Column_Text" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="fd8cfae2-8684-42c6-a444-6cfc2deef21a" Key="Value" Name="right__column__text" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIrSURBVChTlZNNaBNBFMf/s6S0RuLXoSdB2jRNDr2o1Uv1UpCC0JPkVESRihcRlNBbg1BPBS2C9GIFBSmI4EHIQQURxQ/aaqoYilr0ooJQ86Em3d3ZmfG92bUf1iL9MW8f82bf5+wKYwwYhx/5mZxZsoiRyddmqjEEa3n8oW6EAN5980JD18k7pqv3JsrlSmhYCRvMk/m63Yzfemls+IMdm3G/kof8VRfWwMy+KUEu1pbyrg4UMXp7LqxwPWbefl1+YejGK6vz0zkMT51D33gv5ayGZWaHHxaMUoe18qEDD0ZJGKM57bM1ffyNc/xK8Sppfutfghi0yV57WkaqtRk8rz9w75ajl6Y1T2cdIAZGX5gvCxW4yqBt3wQ6km3QWuHC/jH2p8kFCgs1Fz9ri5AyoMyGlk1vcVRArhGbWlpQmnuP4mwpslAImsGY1vqYDvzttn/lQStFR+rH3csDW+0cqNWzZNlFcoBkb5gHgjqE4wjQoro0OaLaFDPz6Z1buvksdyQjYuTAnLp+eneaxxEhlqtcxTaS7sGeHThx8bnHBnuXRul2q1fI/2jU3WbWtgId6CbW9x4U4XKpFKEwcgj9E31IJBJh+ZEo6n+wpwAlJbuEFWgaNfOp4mJPphWfq67dx+NxpOheOlPtSHcmkUkn4fm+PVO+7SD6HGk6jOdJNHwF5YbRfV9C6cBeLIuiCvwogJYNq+2lZs8/+sjfxUboPzP5ndTa33JjAL8B6ql9bS2KuXwAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="0d9916cf-1f69-4109-8e13-8dc94947062e" ClassName="ContactPage" Namespace="SimpleCompanyWebsite" TableName="contact_page">
+      <Properties>
+        <Property Guid="5ea9f0ec-c925-4a98-8be4-47fc07163ee4" CodeName="FormText" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="e066e655-7e20-4c49-8e7a-e54224176c07" Key="Value" Name="form_text" />
+          </DataValues>
+        </Property>
+        <Property Guid="01abd864-1525-4af6-8f8c-6b19d3af855c" CodeName="FormContainer" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="f81e2ca0-89d2-486c-9cfb-312da45af377" Key="Value" Name="form_container" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJpSURBVChTlZNfSFNxFMe/d9fd6zbdnI40c2E0zIGQPhTmnwUlhhkaPVUvgRUU2FtBWZD0EBFRQYQ9Rb4L0oMNKrUaifoQKzOMZa6ZMRe6tjnudr36y3vuzbbIoM/LOef3/f05v/M7P6wTfnmbnRh0Mz0EuJXZAfYgPgROlQoMczQamRoFR94abA3dzYZL9e1mKG7UonkfDFHmhLF8H8SGW2jaYtQE+0VB3YKgU4ptCtKyDFEQyP4i8tYLg+os51gQ8z9CODAGobpTE8x2lOw5Dk5ZeMdmhntoxbGFcdS6FZj4fNys8+H8yP7featMBPys+UMtvrVJaHm+FXmKqCv/gIveNTNTXRclqJKZrDRyXbt4bHERNnc75LREk1Skz0/JcvL7+8yoJJH+1AehTRv82tsK5652uhW3Kv9g0mQvch0uVD47iQOuYpTmVUE2OXHqSy64QN/Z9ap3Fw3Czptwr9GPc75qWG2HdEVHry5LLsfIevo92U9m7edZ1YCdxKNDLhLpLRQpThP+l6WJx9oGtuANpKJLSFhq4Cwr0OWNicx+hFWMI562ahsUKqNIMQcE0YRoOEiTNtV2kM0kMvoQ9pJyPQISoXHkqI6h+gqQlBDwXsOO+oMkrsSCiM+Mk9+1WcRUYgorZQr22ipx5vULlB7pQTqZr2WQ+B7A9sN3gNUULVCZkxK4+qYVZl7rJ7X0KpfHmlFR2IiQsoSOkJnG/oqjO5eqvRGdr3Yyz7CHZbVrJhWXtjFjQxQCx6PEqJ30pClEVm0CQq7P7vc/EU8bGN/CYONF+gM13iJYDAIsq0ZMT8qYvjDP/QTa6C95+EtJpgAAAABJRU5ErkJggg==</Icon>
+      <InheritGuid>966d7227-69e0-4b7a-8475-b89ad21a972a</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( SimpleCompanyWebsite.ContactPage ( HeaderSubtitle FontAwesome_IconString Top_Level_Is_Link TopLevelIsLink_Description ) SimpleCompanyWebsite.BaseItem ( ) Native.HierarchicalContent ( TemplatePath ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="4d7223ba-925e-4446-bdfb-0fdaca6331ec" ClassName="Portfolio" Namespace="SimpleCompanyWebsite" TableName="portfolio">
+      <Settings>
+        <Int Key="MaximumInstances" Value="1" />
+      </Settings>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEwSURBVChTY/z//z8DGIAYXl5e/1FFdHV1kUSggAlKwwGmimm73zyAssGASYCLST4yMvK/ra0tRGn8tHsPQNpgGExM3fUaRRAZY1iCDjCchQ7AChKm30dxGTIgaAXzW4WUgu0XPll4GfCdgIqhAIJuIGgFY9v65w/ef/vH8HJnZffnz5+nfPr0ieHjx48MIPrmzZuMhMPBruBygU3+5QIoHwMw/cNvAGFHEgJgA0BpQEGUTf7B618Ps1xFFCoqKrKBclP+/v3L8OfPH4bfv38z/Pr1C0z//PkTzF6zZg0j3ABKADgiUmc9Luja/OpBaO89nIGBC4ANePP+B8Prj78YPr79CRYkBVAnEEHJ1UCBW/7Cg68PF2QqKhgbG2cDA2sKLMBANHJAggIWiKkRiAwMAOnp2JuNlGMNAAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>966d7227-69e0-4b7a-8475-b89ad21a972a</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( SimpleCompanyWebsite.Portfolio ( HeaderSubtitle FontAwesome_IconString Top_Level_Is_Link TopLevelIsLink_Description ) SimpleCompanyWebsite.BaseItem ( ) Native.HierarchicalContent ( TemplatePath ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="931c3d04-192e-49dd-8af4-93fb8cae0f24" ClassName="EmployeesPage" Namespace="SimpleCompanyWebsite" TableName="employees_page">
+      <Settings>
+        <Int Key="MaximumInstances" Value="1" />
+      </Settings>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANySURBVChTdVJtTJNXFH7u+7b0awVdRSoQYlE0ROtHXWYmio7NDflh3C9102yyZIZQDSRGI8xE44+RkS37SJaoyX4MTDTZArpMjWxaZX5EsXNEYOo621IKVFpa2vLS9n3fs8uL/tiP3eTenHPvc55zz3kOIyJkZtLExqLTJA00gjU0NFBDTQZCYW0bfnCIYA6Hg67tMkB68xNUxi4Cs0GR8QDFvG2kyklCa2sr3e/royfd+ykyFiKxUvYddz07C+diEd0DCgS1dgQLPtqG4dLF+Fo6AxadCFG+WYdcMgCjbTlYe3s7/Xbdg6rsECxiFHtOngRCl1Fo0uPcUCEwODhIFj3o7HozNVUUU0vvMbrz+Qb69PAS/iECc7f102D/UlgLdOj6VoEUPA0mlsBYWsv/rEAr9uUiRSIl2Qs1Mwxlxg/KBHi6UIjcbjc1HjigUd7t/JDG+07ThS/enUvhcrlohU2PD+aFMVxzBLvtXRD1JuQSUVjfv82EsckkPnPFsazcgvTQPZgnYzAm04gEI1paYdE8E450PIbn0lPk1q1A05Qdf/hj+Mq4TQPoHFt+wbTVgjUbGzHf8ASsvAjRZBYp2zjUXIqYraqftq514ujmzVj+xg4o8nyYSnYATMfLkiFM/O5k3xwLwsRykOJ5SAUe8UeRk8+Vz2FA4cIylpAEspa9BtVuR2b0lNYDNTvMxYlGqb6+HoIg4PWqauQZjLja3QX/yCiu9PTAlPLiwbmPYS9zwmxZCJaVMPDoBnTOZmzf08JYdXU1JVISFokJnHlHRmlJPmAyIDHyHD/N1GDThmJUZG8DRn4/q4osQ45H8ONzF3Y1f8eEgoIC/On1Qscvg74cPL0x3OwZxc+Xw1D1pbC59sH3OADZNwTF70P66QA6vHo46w5pNWpa3+/3U33LddgCHrxleobpV5fgnm0vJouCWPneXZSLFWhadRAP/nmIU3xYUiyMOvY23HXNjH3Z6aPO8xasrSyCzqogLoRxYvVuLKu7CcbYi2byg9vyzATCD09A4T6RCoNogG6LywzPrTv4K0DIE/KgF0VkHYxLlIIU6gCpxKcvhlx6HAoTkP9KMefLgUvASeT/juvL9ff5jbR0Z68G4ofWPE7D3RHewF/5WCd4gtk99T8E32+i8r2XoCRvzAG1gPgLe1ILJGV2T+FfAfvCGoGYuMoAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>966d7227-69e0-4b7a-8475-b89ad21a972a</InheritGuid>
+    </ContentClass>
+  </ContentClasses>
+  <Enumerations>
+    <Enumeration Guid="0e832b86-cbcd-4f9b-9d07-ab5855169fa3" CodeName="Power_Types_Enumeration" Namespace="SimpleCompanyWebsite">
+      <Values>
+        <Value Guid="f84d4c8b-9484-4c5f-9f5d-a333b65788cd" CodeName="Solar_Power" />
+        <Value Guid="bf4af7d1-6b84-4c26-b19c-dcab32014d5e" CodeName="Wind_Power" Value="1" />
+        <Value Guid="53d7cb62-1186-4a93-9309-b31e976512a3" CodeName="Water_Power" Value="2" />
+        <Value Guid="c2d97461-c23b-40f1-b086-821c2820da8a" CodeName="Other_Power_Types" Value="3" />
+      </Values>
+    </Enumeration>
+  </Enumerations>
+  <Relations>
+    <Relation Guid="d197e26c-bc6c-4b71-bda4-5a81bcd86dd5" ClassName="MyRelation" Namespace="SimpleCompanyWebsite" TableName="rel_my_relation">
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+    </Relation>
+  </Relations>
+  <Scripts>
+    <InternalScript Guid="87d3d975-d4ea-4cc8-8477-07153378bc4c" RunDuringSave="True" Active="True" Id="webnodes.CodeGeneration" />
+  </Scripts>
+  <Options>
+    <OData>
+      <Settings>
+        <Boolean Key="ODataExposeAllProperties" />
+        <Boolean Key="ODataExposeAllTypes" />
+        <Boolean Key="ODataEnabled" />
+      </Settings>
+    </OData>
+  </Options>
+</Definition>

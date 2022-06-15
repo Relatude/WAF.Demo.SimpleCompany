@@ -1,0 +1,33 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/dist/main.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/css/bootstrap.min.css",
+      "wwwroot/css/animate.css",
+      "wwwroot/css/magnific-popup.css",
+      "wwwroot/lib/flexslider/flexslider.css",
+      "wwwroot/css/form-elements.css",
+      "wwwroot/css/style.css",
+      "wwwroot/css/media-queries.css"
+
+    ],
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/dist/main.js",
+    "inputFiles": [
+      "wwwroot/js/jquery-1.11.1.min.js",
+      "wwwroot/lib/bootstrap/js/bootstrap.min.js",
+      "wwwroot/js/bootstrap-hover-dropdown.js",
+      "wwwroot/js/wow.min.js",
+      "wwwroot/retina-1.1.0.min.js",
+      "wwwroot/js/jquery.magnific-popup.min.js",
+      "wwwroot/lib/flexslider/jquery.flexslider-min.js",
+      "wwwroot/js/masonry.pkgd.min.js",
+      "wwwroot/js/jquery.ui.map.min.js",
+      "wwwroot/js/scripts.js"
+
+    ],
+    "sourceMap": true
+  }
+]

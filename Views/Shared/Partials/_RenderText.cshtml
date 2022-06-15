@@ -1,0 +1,19 @@
+﻿@model Paragraph_Text
+
+@{
+    var paragraph = Model;
+}
+
+    <!-- Services Full Width Text -->
+    <div class="full-width-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 full-width-text wow fadeInLeft">
+                    <h3>@paragraph.Headline</h3>
+                    <p>
+                        @Html.Raw(paragraph.Text)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>

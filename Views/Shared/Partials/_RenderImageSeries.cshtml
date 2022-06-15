@@ -1,0 +1,41 @@
+﻿@model Paragraph_ImageSeries
+
+@{
+    var paragraph = Model;
+}
+
+@if (paragraph.Images.Count > 0)
+    {
+        <!-- Slider -->
+        <div class="slider-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-lg-7 col-sm-offset-1 slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+
+                                @foreach (var image in paragraph.Images.GetAll())
+                                {
+                                    if (image.Image.IsImage())
+                                    {
+                                        var imgUrl = Html.Raw(image.Image.GetUrl(850, 500));
+                                        <li data-thumb="@imgUrl">
+                                            <img src="@imgUrl" />
+                                            @if (!string.IsNullOrWhiteSpace(image.Image_Text))
+                                            {
+                                                <div class="flex-caption">
+                                                    @image.Image_Text
+                                                </div>
+                                            }
+
+                                        </li>
+                                    }
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }

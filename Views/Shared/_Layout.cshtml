@@ -1,0 +1,65 @@
+﻿@using SimpleCompanyWebsite.Code.Helpers
+@using WAF.API.Web
+@inject WAFNativeContext wafContext
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Future - @ViewBag.Title</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="@Url.Content("~/lib/font-awesome/css/font-awesome.min.css")">
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/dist/main.css")" />
+    @*@Styles.Render("~/bundles/css")*@
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="@Url.Content("~/ico/favicon.ico")">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content("~/ico/apple-icon-144x144.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content("~/ico/apple-icon-114x114.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content("~/ico/apple-icon-72x72.png")">
+    <link rel="apple-touch-icon-precomposed" href="@Url.Content("~/ico/apple-icon-57x57.png")">
+</head>
+
+<body>
+    <header class="nav-header-wrapper">
+        <nav class="navbar" role="navigation">
+            @{
+                var menuVm = NavigationHelper.GetMainMenuViewModel(wafContext);
+                //@Html.Action("MainMenu", "Navigation")
+            }
+            @if(menuVm != null)
+            {
+                <partial name="~/Views/Shared/Partials/Navigation/_MainMenu.cshtml" model="menuVm" />
+                
+            }
+        </nav>
+
+        @RenderSection("PageTitle", true)
+    </header>
+    <section id="MainSection">
+        @RenderBody()
+    </section>
+
+    <footer>
+        @{
+            var settings = NavigationHelper.GetSettings(wafContext);
+        }
+        @if(settings != null)
+        {
+            <partial name="~/Views/Shared/Partials/Navigation/_Footer.cshtml" model="settings" />
+        }
+        @*@Html.Action("Footer", "Navigation")*@
+    </footer>
+
+    @*@Scripts.Render("~/bundles/js")*@
+    <script type="text/javascript" src="@Url.Content("~/dist/main.js")"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

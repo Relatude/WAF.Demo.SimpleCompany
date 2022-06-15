@@ -1,0 +1,52 @@
+﻿@model SimpleCompanyWebsite.Models.ViewModels.AllEmployeesViewModel
+@using SimpleCompanyWebsite.Models.ViewModels
+@using WAF.Engine.Property;
+@{
+    ViewBag.Title = "Our employees";
+}
+
+@section PageTitle{
+    @*@CustomViewHelper.RenderPageTitleSection(Model.Page.Name, Model.Page.HeaderSubtitle, Model.Page.FontAwesome_IconString)*@
+        @{
+        var vm = new PageTitleSectionViewModel(Model.Page.Name, Model.Page.HeaderSubtitle, Model.Page.FontAwesome_IconString);
+    }
+    @Html.Partial("~/Views/Shared/Partials/_RenderPageTitleSection.cshtml", vm)
+
+}
+
+<!-- Portfolio -->
+<div class="employees-container">
+    <div class="container">
+        <div class="row">
+            <div class="">
+
+                @foreach (var employee in Model.Employees)
+                {
+                    <div class="col-sm-3 team-person">
+                        <div class="team-box wow fadeInUp">
+                            <img src="@(employee.Photo.IsImage() ? employee.Photo.GetUrl(263): "")" alt="">
+                            <h3>@employee.Name</h3>
+                            <p class="employee-description">@employee.Description</p>
+                            @*<div class="team-social">
+                                @if (employee.SocialMediaLinks.Count > 0)
+                                {
+                                    foreach (var socialContainer in employee.SocialMediaLinks.GetAll())
+                                    {
+                                        if (socialContainer.Link.LinkType != LinkType.Empty)
+                                        {
+                                            <a href="@Html.Raw(socialContainer.Link.GetUrl())"><i class="fa @socialContainer.GetFontAwesomeIcon()"></i></a>
+                                        }
+                                    }
+                                }
+                            </div>*@
+
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

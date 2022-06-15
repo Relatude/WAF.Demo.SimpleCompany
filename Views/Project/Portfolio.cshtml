@@ -1,0 +1,59 @@
+﻿@using SimpleCompanyWebsite.Models.ViewModels
+@model SimpleCompanyWebsite.Models.ViewModels.PortfolioViewModel
+
+
+@{
+    ViewBag.Title = "Portfolio";
+}
+
+@section PageTitle{
+    @*@CustomViewHelper.RenderPageTitleSection(Model.Portfolio.Name, Model.Portfolio.HeaderSubtitle, Model.Portfolio.FontAwesome_IconString)*@
+          @{
+        var vm = new PageTitleSectionViewModel(Model.Portfolio.Name, Model.Portfolio.HeaderSubtitle, Model.Portfolio.FontAwesome_IconString);
+    }
+    @Html.Partial("~/Views/Shared/Partials/_RenderPageTitleSection.cshtml", vm)
+
+}
+
+<!-- Portfolio -->
+<div class="portfolio-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 portfolio-filters wow fadeInLeft">
+                <a href="#" class="filter-all active">All</a> /
+                @{
+                    for (int i = 0; i < Model.FiltersList.Length; i++)
+                    {
+                        <a href="#" class="filter-@Model.FiltersList[i].ToLower().Replace("_","-")">@Model.FiltersList[i].Replace("_", " ")</a>
+
+                        if (i < Model.FiltersList.Length - 1)
+                        {
+                            <text> /</text>
+                        }
+                    }
+                }
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 portfolio-masonry">
+
+                @foreach (var p in Model.ProjectList)
+                {
+                    <div class="portfolio-box @p.GetCssClasses()">
+                        <div class="portfolio-box-container">
+                            <img src="@(p.MainImage.IsImage() ? @Html.Raw(p.MainImage.GetUrl(800, 600)) : @Html.Raw(""))" alt="">
+                            <div class="portfolio-box-text">
+                                <h3>@p.Name</h3>
+                                <p>@p.Blurb</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

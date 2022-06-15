@@ -1,0 +1,27 @@
+﻿@model Paragraph_Image
+
+@{
+    var paragraph = Model;
+}
+
+@if (paragraph.Image.IsImage())
+    {
+
+        <div class="slider-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-lg-7 col-sm-offset-1">
+                        <div class="flexslider">
+                            <img src="@Html.Raw(paragraph.Image.GetUrl())" />
+                            @if (!string.IsNullOrWhiteSpace(paragraph.Image_Text))
+                            {
+                                <div class="flex-caption">
+                                    @paragraph.Image_Text
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }

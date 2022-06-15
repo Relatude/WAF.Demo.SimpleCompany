@@ -1,0 +1,70 @@
+﻿@model SimpleCompanyWebsite.Models.ViewModels.NavigationViewModel
+@using WAF.API.Web
+@using WAF.Presentation.Web
+@using WAF.Engine.Content.SimpleCompanyWebsite
+@using WAF.Engine.Query.SimpleCompanyWebsite
+@inject WAFNativeContext wafContext
+@{
+
+    var site = wafContext.Session.GetSite();
+    var startNodeUrl = wafContext.GetUrl(site.StartNode.GetId());
+}
+
+
+<div class="container" id="menu-container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="@startNodeUrl" style="background: url(@Html.Raw(Model.Logo)) left center no-repeat;"></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="top-navbar-1">
+        <ul class="nav navbar-nav navbar-right">
+
+
+            @foreach (var item in Model.MenuItems)
+            {
+                var childrenExist = item.Children.Count > 0;
+                if (childrenExist)
+                {
+
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-delay="1000">
+                            <i class="fa @item.FontAwesome_IconString"></i><br>@item.Name <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                            @if (item.Top_Level_Is_Link)
+                            {
+                                <li>
+                                    <a href="@wafContext.GetUrl(item.NodeId)"><i class="fa @item.FontAwesome_IconString">&nbsp;</i>  @item.Name</a>
+                                </li>
+                            }
+                            @foreach (var child in item.Children.Query<BaseItem>().Where(AqlBaseItem.ShowInMenu == true).Execute())
+                            {
+                                <li>
+                                    <a href="@wafContext.GetUrl(child.NodeId)"><i class="fa @child.FontAwesome_IconString">&nbsp;</i>  @child.Name</a>
+                                </li>
+
+                            }
+
+                        </ul>
+                    </li>
+
+
+                }
+                else
+                {
+                    <li class="active">
+                        <a href="@wafContext.GetUrl(item.NodeId)"><i class="fa @item.FontAwesome_IconString"></i><br />@item.Name</a>
+                    </li>
+                }
+
+            }
+
+        </ul>
+    </div>
+</div>

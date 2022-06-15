@@ -1,0 +1,21 @@
+﻿@model Paragraph_CallToActionLink
+
+@{
+    var paragraph = Model;
+}
+
+    <!-- Call To Action -->
+    <div class="call-to-action-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 call-to-action-text wow fadeInLeftBig">
+                    <p>
+                        @paragraph.BannerText
+                    </p>
+                    <div class="call-to-action-button">
+                        <a class="big-link-3" href="@Html.Raw(paragraph.Link)">@paragraph.LinkText</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

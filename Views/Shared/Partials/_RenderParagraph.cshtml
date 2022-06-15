@@ -1,0 +1,60 @@
+﻿@model InnerContentBase
+
+@{
+    var paragraph = Model;
+}
+
+    @if (paragraph is Paragraph_Employee pe)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderEmployee.cshtml" model="pe" />
+        @*@RenderEmployee((Paragraph_Employee)paragraph);*@
+    }
+
+    else if (paragraph is Paragraph_Image pi)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderHeaderImage.cshtml" model="pi" />
+
+        @*@RenderHeaderImage((Paragraph_Image)paragraph);*@
+    }
+
+    else if (paragraph is Paragraph_ImageSeries pis)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderImageSeries.cshtml" model="pis" />
+
+        @*@RenderImageSeries((Paragraph_ImageSeries)paragraph);*@
+    }
+
+   else  if (paragraph is Paragraph_Service ps)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderService.cshtml" model="ps" />
+
+        @*@RenderService((Paragraph_Service)paragraph);*@
+    }
+
+    else if (paragraph is Paragraph_Testimonial pt)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderTestimonial.cshtml" model="pt" />
+
+        @*@RenderTestimonial((Paragraph_Testimonial)paragraph);*@
+    }
+
+    else if (paragraph is Paragraph_Text ptxt)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderText.cshtml" model="ptxt" />
+
+        @*@RenderText((Paragraph_Text)paragraph);*@
+    }
+
+   else  if (paragraph is Paragraph_Text_Two_Column pttc)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderTextColumns.cshtml" model="pttc" />
+
+        @*@RenderTextColumns((Paragraph_Text_Two_Column)paragraph);*@
+    }
+
+    else if (paragraph is Paragraph_CallToActionLink pcta)
+    {
+        <partial name="~/Views/Shared/Partials/_RenderCallToActionLink.cshtml" model="pcta" />
+
+        @*@RenderCallToActionLink((Paragraph_CallToActionLink)paragraph);*@
+    }

@@ -1,0 +1,37 @@
+﻿@model Paragraph_Service
+
+@{
+    var paragraph = Model;
+}
+
+    @if (paragraph.Services.Count > 0)
+    {
+        <!-- Services -->
+        <div class="services-container">
+            <div class="container">
+                @if (!string.IsNullOrWhiteSpace(paragraph.Title))
+                {
+                    <div class="row">
+                        <div class="col-sm-12 services-title wow fadeIn">
+                            <h2>@paragraph.Title</h2>
+                        </div>
+                    </div>
+                }
+                <div class="row services">
+
+                    @{
+                        foreach (var service in paragraph.Services.GetAll())
+                        {
+                            <div class="col-sm-3 singleService">
+                                <div class="service wow fadeInDown">
+                                    <div class="service-icon"><i class="fa @service.FontAwesome_String"></i></div>
+                                    <h3>@service.Title</h3>
+                                    <p>@service.Blurb</p>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }

@@ -1,0 +1,65 @@
+﻿@model WAF.Engine.Content.SimpleCompanyWebsite.Settings
+@using WAF.Engine.Content.SimpleCompanyWebsite
+@{
+    Layout = null;
+}
+<div class="container">
+
+    <div id="footerContent" class="row">
+        <div class="col-sm-3 footer-box wow fadeInUp">
+            <h4>About Us</h4>
+            <div class="footer-box-text">
+                <p>
+                    @Model.Blurb
+                </p>
+                <p><a href="/">Read more...</a></p>
+            </div>
+        </div>
+
+
+        <div class="col-sm-3 footer-box wow fadeInDown">
+            <h4>Email Updates</h4>
+            <div class="footer-box-text footer-box-text-subscribe">
+                <p>Enter your email and you'll be one of the first to get new updates:</p>
+                <form role="form" action="assets/subscribe.php" method="post">
+                    <div class="form-group">
+                        <label class="sr-only" for="subscribe-email">Email address</label>
+                        <input type="text" name="email" placeholder="Email..." class="subscribe-email" id="subscribe-email">
+                    </div>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+                <p class="success-message"></p>
+                <p class="error-message"></p>
+            </div>
+        </div>
+
+
+        <div id="contactUs" class="col-sm-3 footer-box wow fadeInDown">
+            <h4>Contact information</h4>
+            <div class="footer-box-text footer-box-text-contact">
+                @(Model.Street_Address != "" ? Html.Raw("<p><i class='fa fa-map-marker'></i> Address: " + Model.Street_Address + "</p>") : Html.Raw(""))
+                @(Model.Phone != "" ? Html.Raw("<p><i class='fa fa-phone'></i> Phone: " + Model.Phone + "</p>") : Html.Raw(""))
+                @(Model.Skype != "" ? Html.Raw("<p><i class='fa fa-user'></i> Skype: " + Model.Skype + "</p>") : Html.Raw(""))
+                @(Model.Email.LinkType != WAF.Engine.Property.LinkType.Empty ? Html.Raw("<p><i class='fa fa-envelope'></i><a href='" + Model.Email.GetUrl() + "'>Email us</a></p>") : Html.Raw(""))
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12 wow fadeIn">
+            <div class="footer-border"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7 footer-copyright wow fadeIn">
+            <p>Copyright @DateTime.Now.Year.ToString() <a href="http://www.webnodes.com">Webnodes AS</a>. Template provided by <a href="http://azmind.com/">azmind.com</a></p>
+        </div>
+        <div class="col-sm-5 footer-social wow fadeIn">
+            @(Model.Facebook_Link.LinkType != WAF.Engine.Property.LinkType.Empty ? Html.Raw("<a href='"+ Model.Facebook_Link +"'><i class='fa fa-facebook'></i></a>") : Html.Raw(""))
+            @(Model.Instagram_Link.LinkType != WAF.Engine.Property.LinkType.Empty ? Html.Raw("<a href='"+ Model.Instagram_Link +"'><i class='fa fa-instagram'></i></a>") : Html.Raw(""))
+            @(Model.Twitter_Link.LinkType != WAF.Engine.Property.LinkType.Empty ? Html.Raw("<a href='"+ Model.Twitter_Link +"'><i class='fa fa-twitter'></i></a>") : Html.Raw(""))
+        </div>
+    </div>
+</div>

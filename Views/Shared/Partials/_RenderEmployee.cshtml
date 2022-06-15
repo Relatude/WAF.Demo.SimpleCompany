@@ -1,0 +1,49 @@
+﻿@model Paragraph_Employee
+
+@{
+    var paragraph = Model;
+}
+
+@if (paragraph.Employees.Count > 0)
+    {
+        <!-- Meet Our Team -->
+        <div class="team-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 team-title wow fadeIn">
+                        <h2>@paragraph.Headline</h2>
+                    </div>
+                </div>
+                <div class="row team-team">
+
+                    @foreach (var employeeContainer in paragraph.Employees.GetAll())
+                    {
+                        if (employeeContainer.Employee.IsSet())
+                        {
+                            var employee = employeeContainer.Employee.Get();
+
+                            <div class="col-sm-3 team-person">
+                                <div class="team-box wow fadeInUp">
+                                    <img src="@(employee.Photo.IsImage() ? employee.Photo.GetUrl(263): "")" alt="">
+                                    <h3>@employee.Name</h3>
+                                    <p class="team-description">@employee.Description</p>
+                                    @*<div class="team-social">
+                                        @if (employee.SocialMediaLinks.Count > 0)
+                                        {
+                                            foreach (var socialContainer in employee.SocialMediaLinks.GetAll())
+                                            {
+                                                if (socialContainer.Link.LinkType != LinkType.Empty)
+                                                {
+                                                    <a href="@Html.Raw(socialContainer.Link.GetUrl())"><i class="fa @socialContainer.GetFontAwesomeIcon()"></i></a>
+                                                }
+                                            }
+                                        }
+                                    </div>*@
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }

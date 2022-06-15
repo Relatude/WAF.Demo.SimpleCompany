@@ -1,0 +1,45 @@
+﻿@using SimpleCompanyWebsite.Models.ViewModels
+@model SimpleCompanyWebsite.Models.ViewModels.ContactViewModel
+@{
+    ViewBag.Title = Model.Contact.Name;
+}
+
+
+@section PageTitle{
+    @*@CustomViewHelper.RenderPageTitleSection(Model.Contact.Name, Model.Contact.HeaderSubtitle, Model.Contact.FontAwesome_IconString)*@
+        @{
+        var vm = new PageTitleSectionViewModel(Model.Contact.Name,Model.Contact.HeaderSubtitle, Model.Contact.FontAwesome_IconString);
+    }
+    @Html.Partial("~/Views/Shared/Partials/_RenderPageTitleSection.cshtml", vm)
+
+}
+
+
+<!-- Contact Us -->
+<div class="contact-us-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 contact-form wow fadeInLeft">
+
+                @Html.Raw(Model.Contact.FormText)
+
+                @Html.Raw(Model.Contact.FormContainer)
+
+            </div>
+            <div class="col-sm-5 contact-address wow fadeInUp">
+                @if (!string.IsNullOrWhiteSpace(Model.Settings.GoogleMapsFrameUrl))
+                {
+                    <h3>We Are Here</h3>
+                    <div id="map" class="map">
+                        <iframe src="@Html.Raw(Model.Settings.GoogleMapsFrameUrl)" frameborder="0" style="border:0; height: 100%; width: 100%;" allowfullscreen></iframe>
+                    </div>
+                }
+
+                <h3>Address</h3>
+                <p>@Model.Settings.Street_Address</p>
+                <p>Phone: @Model.Settings.Phone</p>
+            </div>
+        </div>
+    </div>
+</div>
+

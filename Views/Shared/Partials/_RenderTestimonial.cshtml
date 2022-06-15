@@ -1,0 +1,38 @@
+﻿@model Paragraph_Testimonial
+
+@{
+    var paragraph = Model;
+}
+
+    @if (paragraph.Testimonial.IsSet())
+    {
+        var testimonial = paragraph.Testimonial.Get();
+        <!-- Testimonial -->
+        <div class="testimonials-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 testimonials-title wow fadeIn">
+                        <h2>@paragraph.Headline</h2>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-sm-offset-1 testimonial-list">
+                    <div role="tabpanel" class="tab-pane fade in active" id="tab1">
+                        <div class="testimonial-image">
+                            @if (testimonial.UserPhoto.IsImage())
+                            {
+                                <img src="@Html.Raw(testimonial.UserPhoto.GetUrl(64, 64))" alt="">
+
+                            }
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                @testimonial.Testimony<br>
+                                <a href="@Html.Raw(testimonial.ContactLink)">@(testimonial.UserName + ", " + testimonial.Location)</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }

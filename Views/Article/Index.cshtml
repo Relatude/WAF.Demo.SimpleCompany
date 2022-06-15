@@ -1,0 +1,26 @@
+﻿@using SimpleCompanyWebsite.Models.ViewModels
+@model WAF.Engine.Content.SimpleCompanyWebsite.Article
+
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+
+@section PageTitle{
+    @*@CustomViewHelper.RenderPageTitleSection(Model.Name, Model.HeaderSubtitle, Model.FontAwesome_IconString)*@
+    @{
+        var vm = new PageTitleSectionViewModel(Model.Name, Model.HeaderSubtitle, Model.FontAwesome_IconString);
+    }
+    <partial name="~/Views/Shared/Partials/_RenderPageTitleSection.cshtml" model="vm" />
+}
+
+<!-- Page Content -->
+<section id="ParagraphsContainer">
+    @foreach (var paragraph in Model.Paragraphs.GetAll())
+    {
+        @*@CustomViewHelper.RenderParagraph(paragraph);*@
+    <partial name="~/Views/Shared/Partials/_RenderParagraph.cshtml" model="paragraph" />
+
+    }
+</section>

@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using WAF.Engine.Content.SimpleCompanyWebsite;
+
+namespace SimpleCompanyWebsite.Models.ViewModels {
+    public class ContactViewModel {
+
+        public Settings Settings { get; set; }
+        public ContactPage Contact { get; set; }
+
+    }
+}
