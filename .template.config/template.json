@@ -4,7 +4,7 @@
     "classifications": ["Web", "Relatude"],
     "groupIdentity": "Relatude.Demo",
     "identity": "Relatude.Demo.SimpleCompanyWebsite",
-    "name": "Relatude demosite",
+    "name": "Relatude SimpleCompany demosite",
     "description": "A company demo site using Relatude CMS and MVC",
     "shortName": "relatude.demo.simplecompany",
     "defaultName": "RelatudeDemoSimpleCompany",
