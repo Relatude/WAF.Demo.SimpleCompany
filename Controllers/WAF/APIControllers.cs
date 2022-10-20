@@ -326,6 +326,9 @@ public Native_UIPlugInController(AdminUIAPIControllerContext ctx) : base(ctx) { 
 public class Native_OptimizingModuleController : WAF.Server.Controllers.ContentController<WAF.API.Native.OptimizingModule> { 
 public Native_OptimizingModuleController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
 }
+public class Native_ContentModuleBaseController : WAF.Server.Controllers.ContentController<WAF.API.Native.ContentModuleBase> { 
+public Native_ContentModuleBaseController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
+}
 public class SimpleCompanyWebsite_ControlPanelController : WAF.Server.Controllers.ContentController<WAF.API.SimpleCompanyWebsite.ControlPanel> { 
 public SimpleCompanyWebsite_ControlPanelController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
 }
