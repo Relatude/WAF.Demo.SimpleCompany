@@ -26,7 +26,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="BundlerMinifier.Core" Version="3.2.449" />
-		<PackageReference Include="Relatude.Core" Version="6.0.3139" />
+		<PackageReference Include="Relatude.Core" Version="6.0.3164" />
 	</ItemGroup>
 
 	<ItemGroup>
