@@ -547,6 +547,18 @@ namespace WAF.Engine.Query.SimpleCompanyWebsite {
             }
         }
 
+        public static AqlPropertyInteger StartNode {
+            get {
+                return new AqlPropertyInteger(WAF.Data.Query.Native.SqlSystemUser.Field.StartNode, WAFID.GetContentClassId("587718a4-c62d-43f0-83b5-59725f604589"));
+            }
+        }
+
+        public static AqlPropertyShortString StartModule {
+            get {
+                return new AqlPropertyShortString(WAF.Data.Query.Native.SqlSystemUser.Field.StartModule, WAFID.GetContentClassId("587718a4-c62d-43f0-83b5-59725f604589"));
+            }
+        }
+
         public static AqlPropertyShortString TemplatePath {
             get {
                 return new AqlPropertyShortString(WAF.Data.Query.Native.SqlHierarchicalContent.Field.TemplatePath, WAFID.GetContentClassId("587718a4-c62d-43f0-83b5-59725f604589"));

@@ -317,6 +317,15 @@ public Native_ContentModuleBaseController(AdminUIAPIControllerContext ctx) : bas
 public class Native_HeadlessServerController : WAF.Server.Controllers.ContentController<WAF.API.Native.HeadlessServer> { 
 public Native_HeadlessServerController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
 }
+public class Native_ProductListController : WAF.Server.Controllers.ContentController<WAF.API.Native.ProductList> { 
+public Native_ProductListController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
+}
+public class Native_StatisticsSettingsController : WAF.Server.Controllers.ContentController<WAF.API.Native.StatisticsSettings> { 
+public Native_StatisticsSettingsController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
+}
+public class Native_SalesChannelController : WAF.Server.Controllers.ContentController<WAF.API.Native.SalesChannel> { 
+public Native_SalesChannelController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
+}
 public class SimpleCompanyWebsite_ControlPanelController : WAF.Server.Controllers.ContentController<WAF.API.SimpleCompanyWebsite.ControlPanel> { 
 public SimpleCompanyWebsite_ControlPanelController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
 }
